@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server"
+    "build": "webpack --config webpack.config.prod.js",
+    "start": "webpack serve --config webpack.config.dev.js"
   },
   "keywords": [
     "typescript",
@@ -14,6 +15,11 @@
   "author": "eddienubes",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.5.4"
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.3",
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }
